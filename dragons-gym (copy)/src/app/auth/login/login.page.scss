@@ -1,0 +1,25 @@
+// ion-input::shadow input{
+//     // --background: #3880ff;
+//     // --color: #fff;
+//     --border-color: rgb(163, 3, 3);
+//     --border-bottom-width: 1mm;
+// }
+ion-button{
+    --background:rgb(163, 3, 3);
+    --color:rgb(241, 245, 3);
+    font-weight:700;
+}
+a{
+    color: #fff;
+}
+
+:host {
+    .item-interactive.ion-invalid{
+     --highlight-background: rgb(163, 3, 3) !important;
+     --border-color: rgb(163, 3, 3);
+     --border-bottom-width: 1mm;
+   }
+   .item-interactive.ion-valid{
+     --highlight-background: rgb(163, 3, 3) !important;
+   }
+ }

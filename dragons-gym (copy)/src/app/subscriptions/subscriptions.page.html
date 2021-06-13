@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="header ion-text-center">Choose Your Plan</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="button-group">
+    <span *ngFor="let group of groups">
+      <ion-button [ngClass]="activeButton==group?'button-activated':'button'" (click)="subscribeList(group)">{{group}}</ion-button>
+    </span>
+
+  </div>
+  <ion-list *ngFor="let subs of subscriptionFilter">
+    <!-- <ion-item  button >
+        <ion-label>{{subs.plan_name}}</ion-label>
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-item> -->
+    <ion-card class="price-card">
+      <ion-card-header>
+        <ion-card-title class="title">{{subs.plan_name}}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div>{{subs.description}}</div>
+        <div class="details">
+          <span> {{subs.duration}}</span>
+          <span class="price">
+            <span *ngIf="subs.discount==0">{{subs.price}}</span>
+            <span *ngIf="subs.discount!=0">
+              <span class="strikethrough">{{subs.price}}</span>
+              <span>{{subs.price-subs.discount}}</span>
+            </span>
+          </span>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

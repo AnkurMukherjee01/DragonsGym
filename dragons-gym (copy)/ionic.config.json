@@ -1,0 +1,7 @@
+{
+  "name": "dragons-gym",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,13 @@
+<h1 style="background-color: rgb(163, 3, 3); color: rgb(244, 252, 155)">Dragons Gym</h1>
+<mat-card class="uploadPanel">
+  <input #csvInput hidden="true" type="file" onclick="this.value=null" (change)="inputChange($event)" accept=".xlsx" />
+  <button mat-flat-button color="accent" (click)="csvInput.click()">Choose Spreadsheet File</button>
+  <div class="sheetsToUpload" *ngIf="isUploaded">
+    <div *ngFor="let sheet of sheets; let i = index">
+      <mat-checkbox class="example-margin" [(ngModel)]="sheetChecked[i]">{{sheet}}</mat-checkbox>
+    </div>
+    <button mat-raised-button (click)="upload()">Upload</button>
+
+  </div>
+  <button mat-raised-button class="downloadButton" (click)="getTable()">Download</button>
+</mat-card>

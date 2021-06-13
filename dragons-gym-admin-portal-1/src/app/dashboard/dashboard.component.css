@@ -1,0 +1,15 @@
+.sheetsToUpload{
+    font-weight: 600;
+    margin-top: 20px;
+}
+.uploadPanel{
+    width:60%; margin-left:20%; color: rgb(163, 3, 3); background-color: rgb(244, 252, 155)
+}
+
+button{
+    background-color: rgb(163, 3, 3); color: rgb(244, 252, 155);
+}
+
+.downloadButton{
+    margin-left:20px;
+}

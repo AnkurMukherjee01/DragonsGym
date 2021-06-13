@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="header ion-text-center">Trainers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-grid>
+     <ion-row *ngFor ="let data of Data" class="trainer-row">
+      <ion-col size="3">
+    <img src="https://material.angular.io/assets/img/examples/shiba1.jpg">
+    </ion-col>
+    <ion-col size="9">
+    <ion-item>
+      <h3>{{data.name}}</h3>
+    </ion-item> 
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col><h6>Height: {{data.height}}</h6></ion-col>
+          <ion-col><h6>Weight: {{data.weight}}</h6></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><h6>Achievement: {{data.achievement}}</h6></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><h6>Current Status: {{data.currentStatus}}</h6></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+    </ion-col>
+     </ion-row>
+    </ion-grid>
+  
+  </ion-card>
+  
+</ion-content>

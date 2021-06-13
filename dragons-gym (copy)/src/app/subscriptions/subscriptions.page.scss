@@ -1,0 +1,54 @@
+.button-group{
+    justify-content: center;
+    display: flex;
+}
+.button{
+    --background:rgb(224, 2, 2);
+    color: rgb(233, 253, 9);
+    font-weight: 700
+}
+.button-activated{
+    --background:rgb(184, 2, 2);
+    color: rgb(234, 255, 0);
+    font-weight: 700
+}
+.priceNotValid{
+    text-decoration:line-through 4px rgb(109, 0, 0);
+}
+.price{
+    float:right;
+}
+.price-card{
+    --background:rgb(179, 1, 1);
+    color:rgb(233, 253, 9);
+    font-weight: 700;
+    font-size:18px;
+}
+.title{
+    color:rgb(255, 251, 0);
+    font-size:36px;
+    font-weight:900;
+}
+.details{
+    font-size: 24px;
+}
+.strikethrough {
+    position: relative;
+    margin-right:5px;
+    font-size:16px;
+  }
+  .strikethrough:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 4px solid;
+    border-color: rgb(109, 0, 0);
+  
+    -webkit-transform:rotate(-20deg);
+    -moz-transform:rotate(-20deg);
+    -ms-transform:rotate(-20deg);
+    -o-transform:rotate(-20deg);
+    transform:rotate(-20deg);
+  }
